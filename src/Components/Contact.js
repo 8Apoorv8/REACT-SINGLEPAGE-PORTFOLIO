@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <div
@@ -38,9 +38,9 @@ const Contact = () => {
               placeholder="write something for me.."
               rows="10"
             ></textarea>
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <motion.button whileInView={{ y: 0, opacity: 1, type: "spring" }} initial={{ y: -60, opacity: 0 }} className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>
